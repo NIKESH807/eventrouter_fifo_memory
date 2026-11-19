@@ -154,10 +154,8 @@ module tb_event_router_memory;
         send_event(4'b1111);
         wait(fifo_empty);
         #5;
-        $display("--------------------------------");
         $display("TOTAL PASS = %0d", pass_count);
         $display("TOTAL FAIL = %0d", fail_count);
-        $display("--------------------------------");
         if (pass_count == 6 && fail_count == 0)
             $display("INTEGRATION TEST PASSED");
         else
